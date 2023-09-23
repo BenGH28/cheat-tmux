@@ -29,6 +29,6 @@ source "$CURRENT_DIR/scripts/util.sh"
 default_cheat_key="C-h"
 default_split_direction="horizontal"
 
-split_direction=$(get_tmux_option "@split-direction" "$default_split_direction")
+split_direction=$(get_tmux_option "@cheat-split-direction" "$default_split_direction")
 
 tmux bind-key "$(get_tmux_option "@cheat-key" "$default_cheat_key")" display-popup -E -h 3 -w 100 "$CURRENT_DIR/scripts/cheat.sh" "$split_direction"
